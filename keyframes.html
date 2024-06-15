@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Keyframes</title>
+    <style>
+        body {
+            background-image: url('./img/fundo.jpg');
+            position: relative;
+            height: 100vh;
+        }
+        @keyframes fly {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(calc(100vw - 200px));
+            }
+        }
+        .box {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+
+            animation-name: fly;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: .2s;
+        }
+        .box img {
+            width: 180px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="box">
+        <img src="./img/bita.png" alt="bita">
+    </div>
 </body>
 </html>
