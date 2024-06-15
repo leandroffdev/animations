@@ -5,37 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyframes</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        @keyframes paisagem {
+            0% {
+                margin-left: 0;
+            }
+            100% {
+                margin-left: -100vw;
+            }
+        }
         body {
-            background-image: url('./img/fundo.jpg');
+            background: url('./img/fundo.jpg') repeat-x;
             position: relative;
             height: 100vh;
+            box-sizing: border-box;
         }
         @keyframes fly {
             0%, 100% {
                 transform: translateX(0);
             }
-            50% {
+            100% {
                 transform: translateX(calc(100vw - 200px));
             }
         }
-        .box {
+        .aviao {
             position: absolute;
             top: 40%;
-            transform: translateY(-50%);
 
-            animation-name: fly;
-            animation-duration: 1s;
-            animation-timing-function: ease-in;
-            animation-delay: .2s;
+            /* Controle da ainimação */
+            /*animation-name: fly;*/    /*Nome nda animação*/
+            /*animation-duration: 1s;*/ /*Duração de execução da animação*/
+            /*animation-timing-function: ease-in;*/ /*formas de execução no tempo: ease, linear*/
+            /*animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);*/ /*formas de execução no tempo: ease, linear*/
+            /*animation-timing-function: steps(5); */   /*quantos passos durante a execução*/
+            /*animation-iteration-count: infinite;*/ /*Quantas vezes a animação será executada*/
+            /*animation-direction: alternate;*/ /*Direção da animação*/
+            /*animation-fill-mode: backwards;*/ /*valores antes e depois da animação*/
+            /* animation-delay: .2s;*/      /*Tempo antes da execução */
+            /*
+            &:hover{ 
+                animation-play-state: running;
+            }*/
+
+            animation: fly 1.5s linear infinite;
         }
-        .box img {
+        .aviao img {
             width: 180px;
         }
     </style>
 </head>
 <body>
-    <div class="box">
-        <img src="./img/bita.png" alt="bita">
+    <div class="aviao">
+        <img src="./img/bita.png" alt="aviao">
     </div>
 </body>
 </html>
