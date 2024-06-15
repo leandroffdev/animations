@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estudo de animações usando a propriedade transform">
+    <title>Transform CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ff00c8;
+            border-radius: 50%;
+            
+            transition-property: background-color border-radius;
+            transition-duration: 2s;
+            transition-delay: .3s;
+            transition-timing-function: ease-in-out;
+        }
+        .box:hover {
+            background-color: #08a4ff;
+            border-radius: 0%;
+            transform: rotate(360deg) scale(2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Mini curso animação CSS: https://youtu.be/eTELLTacg-8 -->
+    <div class="box"></div>
+</body>
+</html>
