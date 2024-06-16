@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square-Timeline</title>
+    <style>
+        #square {
+            background-color: deeppink;
+            width: 100px;
+            height: 100px;
+            animation-name: rotateAnimation;
+            animation-duration: 1ms; /* Firefox requires this to apply the animation */
+            animation-timeline: scroll();   /*https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline*/
+            position: absolute;
+            bottom: 0;
+        }
+        #stretcher {
+            height: 200vh;
+            background: #dedede;
+        }
+        @keyframes rotateAnimation {
+            from {
+                transform: rotate(0deg);
+        }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="stretcher">
+        <div id="square"></div>
+    </div>
+</body>
+</html>
