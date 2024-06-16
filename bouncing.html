@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            place-items: center;
+            height: 100vh;
+
+            animation: is-bouncing 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) alternate infinite;
+        }
+        @keyframes is-bouncing {
+            from {}
+            to {
+                transform: translateY(-40px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="./img/check.svg" alt="">
+</body>
+</html>
